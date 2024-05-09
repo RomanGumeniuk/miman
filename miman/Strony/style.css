@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+#ikonka{
+    transition: transform .2s; 
+}
+#ikonka:hover{
+    transform: scale(1.1);
+}
+
+/*#komentarz{
+    text-align: center;
+}*/
+
+#navbar{
+    position: absolute;
+    z-index: 20;
+    position: sticky;
+    top: 0;
+}
+#content{
+    padding-top:5vh;
+    box-sizing: border-box;
+    padding-left: 6vh;
+}
+
+body{
+    background-image: url('https://i.pinimg.com/originals/87/7c/c3/877cc368116f3acb5993d70513a115a5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+iframe{
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 690px;        /* Viewport-relative units */
+    width: 100%;
+}
+
+
+
+

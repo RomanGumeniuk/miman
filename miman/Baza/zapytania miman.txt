@@ -1,0 +1,29 @@
+CREATE TABLE gry (
+id_gry int PRIMARY KEY AUTO_INCREMENT,
+nazwa varchar(128),
+link varchar(256),
+gatunek varchar (64),
+ikonka varchar(256)
+)
+
+CREATE TABLE uzytkownicy(
+id_usera int PRIMARY KEY AUTO_INCREMENT,
+login varchar(50),
+haslo varchar(64),
+ranga char(1)
+)
+
+CREATE TABLE komentarze(
+id_komentarza int not null PRIMARY KEY AUTO_INCREMENT,
+id_gry int not null,
+id_usera int not null,    
+komentarz varchar(512),
+ilosc_lajkow int,
+FOREIGN KEY(id_gry) REFERENCES gry(id_gry),
+FOREIGN KEY(id_usera) REFERENCES uzytkownicy(id_usera)
+)
+
+
+
+
+insert into gry(nazwa,link,gatunek,ikonka) VALUES("Soldier Attack 1",'<div><script src="https://cdn.htmlgames.com/embed.js?game=SoldierAttack1&amp;bgcolor=white"></script></div>',"strzelanka","https://www.htmlgames.com/uploaded/game/thumb200/soldierattack1200.jpg")
